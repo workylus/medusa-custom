@@ -1,8 +1,0 @@
-{
-  "name": "@workylus/medusa-custom",
-  "version": "2.5.1-custom",
-  "main": "dist/index.js",
-  "description": "MedusaJS 2.5.1 özelleştirilmiş dist dosyaları",
-  "author": "workylus",
-  "license": "MIT"
-}
