@@ -8,7 +8,7 @@ const validators_1 = require("../../utils/validators");
 const validators_2 = require("../campaigns/validators");
 exports.AdminGetPromotionParams = (0, validators_1.createSelectParams)();
 exports.AdminGetPromotionsParamsFields = zod_1.z.object({
-    id: zod_1.z.string().optional(),
+    id: zod_1.z.array(zod_1.z.string()).optional(),
     q: zod_1.z.string().optional(),
     code: zod_1.z.union([zod_1.z.string(), zod_1.z.array(zod_1.z.string())]).optional(),
     campaign_id: zod_1.z.union([zod_1.z.string(), zod_1.z.array(zod_1.z.string())]).optional(),

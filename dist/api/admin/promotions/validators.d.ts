@@ -9,7 +9,7 @@ export declare const AdminGetPromotionParams: z.ZodObject<{
     fields?: string | undefined;
 }>;
 export declare const AdminGetPromotionsParamsFields: z.ZodObject<{
-    id: z.ZodOptional<z.ZodString>;
+    id: z.ZodOptional<z.ZodArray<z.ZodString, "many">>;
     q: z.ZodOptional<z.ZodString>;
     code: z.ZodOptional<z.ZodUnion<[z.ZodString, z.ZodArray<z.ZodString, "many">]>>;
     campaign_id: z.ZodOptional<z.ZodUnion<[z.ZodString, z.ZodArray<z.ZodString, "many">]>>;
@@ -141,7 +141,7 @@ export declare const AdminGetPromotionsParamsFields: z.ZodObject<{
         $lte?: any;
     }>]>>;
 }, "strip", z.ZodTypeAny, {
-    id?: string | undefined;
+    id?: string[] | undefined;
     q?: string | undefined;
     code?: string | string[] | undefined;
     campaign_id?: string | string[] | undefined;
@@ -152,7 +152,7 @@ export declare const AdminGetPromotionsParamsFields: z.ZodObject<{
     updated_at?: any;
     deleted_at?: any;
 }, {
-    id?: string | undefined;
+    id?: string[] | undefined;
     q?: string | undefined;
     code?: string | string[] | undefined;
     campaign_id?: string | string[] | undefined;
