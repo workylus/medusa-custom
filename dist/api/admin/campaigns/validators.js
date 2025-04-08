@@ -8,6 +8,7 @@ const common_validators_1 = require("../../utils/common-validators");
 exports.AdminGetCampaignParams = (0, validators_1.createSelectParams)();
 exports.AdminGetCampaignsParamsFields = zod_1.z
     .object({
+    id: zod_1.z.array(zod_1.z.string()).optional(),
     q: zod_1.z.string().optional(),
     campaign_identifier: zod_1.z.string().optional(),
     budget: zod_1.z

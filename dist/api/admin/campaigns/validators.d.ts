@@ -8,6 +8,7 @@ export declare const AdminGetCampaignParams: z.ZodObject<{
     fields?: string | undefined;
 }>;
 export declare const AdminGetCampaignsParamsFields: z.ZodObject<{
+    id: z.ZodOptional<z.ZodArray<z.ZodString, "many">>;
     q: z.ZodOptional<z.ZodString>;
     campaign_identifier: z.ZodOptional<z.ZodString>;
     budget: z.ZodOptional<z.ZodObject<{
@@ -18,12 +19,14 @@ export declare const AdminGetCampaignsParamsFields: z.ZodObject<{
         currency_code?: string | undefined;
     }>>;
 }, "strict", z.ZodTypeAny, {
+    id?: string[] | undefined;
     q?: string | undefined;
     campaign_identifier?: string | undefined;
     budget?: {
         currency_code?: string | undefined;
     } | undefined;
 }, {
+    id?: string[] | undefined;
     q?: string | undefined;
     campaign_identifier?: string | undefined;
     budget?: {
